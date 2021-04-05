@@ -27,16 +27,17 @@
     		<source src="sound/clapping.wav" type="audio/wav">
 		</audio>
 		
-		<div class="card ">
+		<div class="card head ">
 			<div class="card-header bg-dark text-white text-center">
 				<h1>Master Type Writting</h1>
+				<button class="btn btn-outline-white " id="dark"><span id="darkChange">Dark Mode</span></button>
 			</div>
 		</div>
 
 
 		<div class="row">
 			<div class="col-sm-8 col-md-8 col-lg-10">
-				<div class="card h-100">
+				<div class="card h-100" id="leftSide">
 					<div class="card-body mt-2 ">
 						
 						<p class="font-weight-bold text-center" id="orginalText" oncopy = "return false">Thanks for Learning UI Technologies.</p>
@@ -45,8 +46,8 @@
 							<textarea class=" text-center m-auto w-75 " rows="3" onpaste="return false" id="text"></textarea>
 							<h1 class="mt-2 text-center">
 								<span class="clockStyle">Minutes</span> <span class="font-weight-bold" id="minutes">00</span>
-								<span class="clockStyle">Second</span> <span class="font-weight-bold" id="second">00</span>
-								<span class="clockStyle">Milliseconds</span> <span class="font-weight-bold" id="millisecond">00</span>
+								<span class="clockStyle clock1">Second</span> <span class="font-weight-bold" id="second">00</span>
+								<span class="clockStyle clock2">Milliseconds</span> <span class="font-weight-bold" id="millisecond">00</span>
 							</h1>
 							<button class="btn btn-danger text-white btn-lg display-4 mt-3 " id="reset">Reset</button>
 							<h1 class="mt-2 text-center" id="Congrat">Congratulations!!</h1>
@@ -55,17 +56,17 @@
 				</div>
 			</div>
 			<div class="col-sm-4 col-sm-3 col-lg-2">
-				<div class="card">
-					<div class="card-body text-center">
+				<div class="card ">
+					<div class="card-body text-center" id="rightSide">
 						<button class="btn btn-success text-white btn-block" id="bt" onclick="moreText(0)">Lession 1</button>
 						<button class="btn btn-secondary text-white btn-block" onclick="moreText(1)">Lession 2</button>
 						<button class="btn btn-danger text-white btn-block" onclick="moreText(2)">Lession 3</button>
-						<button class="btn btn-dark text-white btn-block" onclick="moreText(3)">Lession 4</button>
+						<button class="btn btn-info text-white btn-block" onclick="moreText(3)">Lession 4</button>
 						<button class="btn btn-warning text-white btn-block" onclick="moreText(4)">Lession 5</button>
 						<button class="btn btn-success text-white btn-block" onclick="moreText(5)">Lession 6</button>
 						<button class="btn btn-secondary text-white btn-block" onclick="moreText(6)">Lession 7</button>
 						<button class="btn btn-danger text-white btn-block" onclick="moreText(7)">Lession 8</button>
-						<button class="btn btn-dark text-white btn-block" onclick="moreText(8)">Lession 9</button>
+						<button class="btn btn-info text-white btn-block" onclick="moreText(8)">Lession 9</button>
 						<button class="btn btn-warning text-white btn-block" onclick="moreText(9)">Lession 10</button>
 					</div>
 				</div>

@@ -8,20 +8,26 @@ let millisecondTag = document.querySelector('#millisecond');
 let congratulations = document.querySelector('#Congrat');
 let sound = document.querySelector('#clap-sound');
 let resetBtn = document.querySelector('#reset')
+let leftMode = document.querySelector('#leftSide')
+let rightMode = document.querySelector('#rightSide')
+let col = document.querySelector('.clockStyle')
+let col2 = document.querySelector('.clock1')
+let col3 = document.querySelector('.clock2')
 let min = 0;
 let sec =0;
 let m_sec = 0;
 let count = 0;
 let timeRunning = false;
 let interval = null;
+let darkModeBtn = document.querySelector('#dark')
+let darkMode = false;
 
 // lession
 
 let moreText = (index) =>{
 	let text = lession[index];
 	orginalBoxTag.innerText = text;
- 
-
+resetFun()
 }
 // Timmer 
 let timeTag = () =>{
@@ -97,9 +103,9 @@ let colorValue = (color) =>{
 }
 
 
-// Reset Code
+// Reset Code Function
 
-reset.addEventListener('click',function(){
+let resetFun = () =>{
 	clearInterval(interval);
 	 min = 0;
 	 sec =0;
@@ -114,8 +120,43 @@ reset.addEventListener('click',function(){
 	textAreaBoxTag.value = "";
 	colorValue('gray');
 	congratulations.style.display = 'none';
+}
 
+reset.addEventListener('click',function(){
+	
+resetFun()
 
 	
 
+})
+darkModeBtn.addEventListener('click',function(){
+	if(!darkMode){
+		document.body.style.backgroundColor = "rgb(38, 38, 38)";
+	leftMode.style.backgroundColor = "rgb(38, 38, 38)";
+	rightMode.style.backgroundColor = "rgb(38, 38, 38)";
+	textAreaBoxTag.style.backgroundColor =  "rgb(38, 38, 38)";
+	textAreaBoxTag.style.color =  "white";
+	col.style.color =  "white";
+	col2.style.color =  "white";
+	col3.style.color =  "white";
+	orginalBoxTag.style.backgroundColor =  "rgb(38, 38, 38)";
+	orginalBoxTag.style.color =  "white";
+	 document.querySelector('#darkChange').innerText='Normal Mode';
+	darkMode= true;
+	}
+	else{
+		document.body.style.backgroundColor = "";
+		leftMode.style.backgroundColor = "";
+	rightMode.style.backgroundColor = "";
+	textAreaBoxTag.style.backgroundColor =  "";
+	textAreaBoxTag.style.color =  "";
+	col.style.color =  "";
+	col2.style.color =  "";
+	col3.style.color =  "";
+	orginalBoxTag.style.backgroundColor =  "";
+	orginalBoxTag.style.color =  "";
+	document.querySelector('#darkChange').innerText='Dark Mode';
+		darkMode = false;
+		}
+	
 })

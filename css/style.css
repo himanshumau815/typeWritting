@@ -1,5 +1,6 @@
 body{
 	font-family: 'Ubuntu', sans-serif;
+
 }
 #orginalText{
 	font-size: 20px;
@@ -15,7 +16,14 @@ body{
 
 
 }
+.head .card-header {
+display: flex;
+align-items: center;
+justify-content: space-between;
+}
+.head .card-header button{
 
+}
 textarea{
 	outline: none;
 	border: 5px solid rgb(94,94,94);
@@ -51,6 +59,9 @@ textarea{
 	margin-top: 10px;
 }
 #footer{
-	padding: 10px;
-	margin-top: 22px;
+	
+	height: 18vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
 }
