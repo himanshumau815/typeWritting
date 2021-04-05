@@ -7,7 +7,7 @@ let secondTag = document.querySelector('#second');
 let millisecondTag = document.querySelector('#millisecond');
 let congratulations = document.querySelector('#Congrat');
 let sound = document.querySelector('#clap-sound');
-
+let resetBtn = document.querySelector('#reset')
 let min = 0;
 let sec =0;
 let m_sec = 0;
@@ -96,3 +96,26 @@ let colorValue = (color) =>{
 	textAreaBoxTag.style.borderColor = color;
 }
 
+
+// Reset Code
+
+reset.addEventListener('click',function(){
+	clearInterval(interval);
+	 min = 0;
+	 sec =0;
+	 m_sec = 0;
+	 count =0;
+	 timeRunning = false;
+	 interval = null;
+	
+	minutesTag.innerText = "00";
+	 secondTag.innerText =  "00";
+	millisecondTag.innerText= "00";
+	textAreaBoxTag.value = "";
+	colorValue('gray');
+	congratulations.style.display = 'none';
+
+
+	
+
+})
