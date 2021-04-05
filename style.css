@@ -1,0 +1,48 @@
+body{
+	font-family: 'Ubuntu', sans-serif;
+}
+#orginalText{
+	font-size: 23px;
+	border: 2px solid rgb(94,94,94);
+	background-color: rgb(224, 224, 224);
+	width: 100%;
+	margin: auto;
+	margin-bottom: 30px;
+	border-radius: 15px;
+	box-shadow: 0 0 10px black;
+	user-select: none;
+
+
+}
+
+textarea{
+	outline: none;
+	border: 5px solid rgb(94,94,94);
+	border-radius: 20px;
+	font-size: 24px;
+	font-weight: bold;
+	}
+.clockStyle{
+	color: rgb(111,75,75);
+	font-family: 'Dancing Script', cursive;
+}
+#minutes,#second,#millisecond{
+	color: blue;
+	font-family: 'Oswald', sans-serif;
+}
+#Congrat{
+	font-family: 'Dancing Script', cursive;
+	background:linear-gradient(45deg,darkred,gray,blue);
+	color: white;
+	font-weight: bold;
+	width: 40%;
+	margin: auto;
+	border: 3px solid black;
+	box-shadow: 0 0 10px rgb(111,75,75);
+	border-radius: 20px;
+	display: none;
+
+}
+.row{
+	width: 100%;
+}
